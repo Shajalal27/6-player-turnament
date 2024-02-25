@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Six Player Tournament</title>
+    <!-- <link rel="stylesheet" href="./style/style.css"> -->
+    <!-- daisy UI Link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .selected-players{
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Header Section -->
+    <section class="w-full lg:w-[1240px] lg:mx-auto my-10">
+        <div class="text-gray-700 text-4xl font-bold flex-col flex lg:flex-row justify-between pl-5">
+            <h3>Budget:<span id="budget" class="price-color">2500</span>$</h3>
+            <h3>Cart:<span id="cart" class="price-color">0</span></h3>
+            <h3>Left:<span id="left" class="price-color">6</span></h3>
+        </div>
+    </section>
+   <!-- Main Container -->
+   <section class="w-full lg:w-[1240px] lg:mx-auto my-10">
+    <div class="flex flex-col lg:flex-row">  
+        <div class="players-container">
+            <div class="w-[700px] flex flex-col lg:flex-row lg:gap-16">
+                <div class="w-[340px] text-3xl text-black font-semibold lg:p-10 space-y-3 shadow-xl shadow-indigo-500/40 rounded-lg text-center">
+                    <h5>Tamim Iqbal</h5>
+                    <h5>Price:<span>300</span>$</h5>
+                    <h5>Category:<span>Bat</span></h5>
+                    <button class="add-btn bg-slate-200 rounded-lg py-3 px-6">Add to Cart</button>
+                </div>
+                <div class="player-btn w-[340px] text-3xl text-black font-semibold lg:p-10 space-y-3 shadow-xl shadow-indigo-500/40 rounded-lg text-center lg:mt-0 mt-14">
+                    <h5>Sakib Ul Hassan</h5>
+                    <h5>Price:<span>300</span>$</h5>
+                    <h5>Category:<span>Allrounder</span></h5>
+                    <button class="add-btn bg-slate-200 rounded-lg py-3 px-6 ">Add to Cart</button>
+                </div>  
+            </div>
+            <div class="max-w-[700px] flex flex-col lg:flex-row lg:gap-16 lg:mt-10 mt-14">
+                <div class="max-w-[340px] text-3xl text-black font-semibold lg:p-10 space-y-3 shadow-xl shadow-indigo-500/40 rounded-lg text-center">
+                    <h5>Tamim Iqbal</h5>
+                    <h5>Price:<span>300</span>$</h5>
+                    <h5>Category:<span>Bat</span></h5>
+                    <button class="add-btn bg-slate-200 rounded-lg py-3 px-6">Add to Cart</button>
+                </div>
+                <div class="max-w-[340px] text-3xl text-black font-semibold lg:p-10 space-y-3 shadow-xl shadow-indigo-500/40 rounded-lg text-center lg:mt-0 mt-14">
+                    <h5>Tamim Iqbal</h5>
+                    <h5>Price:<span>300</span>$</h5>
+                    <h5>Category:<span>Bat</span></h5>
+                    <button class="add-btn bg-slate-200 rounded-lg py-3 px-6 ">Add to Cart</button>
+                </div>  
+            </div>
+            <div class="max-w-[700px] flex flex-col lg:flex-row lg:gap-16 lg:mt-10 mt-14">
+                <div class="max-w-[340px] text-3xl text-black font-semibold lg:p-10 space-y-3 shadow-xl shadow-indigo-500/40 rounded-lg text-center">
+                    <h5>Tamim Iqbal</h5>
+                    <h5>Price:<span>300</span>$</h5>
+                    <h5>Category:<span>Bat</span></h5>
+                    <button class="add-btn bg-slate-200 rounded-lg py-3 px-6">Add to Cart</button>
+                </div>
+                <div class="max-w-[340px] text-3xl text-black font-semibold lg:p-10 space-y-3 shadow-xl shadow-indigo-500/40 rounded-lg text-center lg:mt-0 mt-14">
+                    <h5>Tamim Iqbal</h5>
+                    <h5>Price:<span>300</span>$</h5>
+                    <h5>Category:<span>Bat</span></h5>
+                    <button class="add-btn bg-slate-200 rounded-lg py-3 px-6 ">Add to Cart</button>
+                </div>  
+            </div>
+            <div class="max-w-[700px] flex flex-col lg:flex-row lg:gap-16 lg:mt-10 mt-14">
+                <div class="max-w-[340px] text-3xl text-black font-semibold lg:p-10 space-y-3 shadow-xl shadow-indigo-500/40 rounded-lg text-center">
+                    <h5>Tamim Iqbal</h5>
+                    <h5>Price:<span>300</span>$</h5>
+                    <h5>Category:<span>Bat</span></h5>
+                    <button class="add-btn bg-slate-200 rounded-lg py-3 px-6">Add to Cart</button>
+                </div>
+                <div class="max-w-[340px] text-3xl text-black font-semibold lg:p-10 space-y-3 shadow-xl shadow-indigo-500/40 rounded-lg text-center lg:mt-0 mt-14">
+                    <h5>Tamim Iqbal</h5>
+                    <h5>Price:<span>300</span>$</h5>
+                    <h5>Category:<span>Bat</span></h5>
+                    <button class="add-btn bg-slate-200 rounded-lg py-3 px-6 ">Add to Cart</button>
+                </div>  
+            </div>
+        </div>
+        <div class="space-y-3 cart-container w-full lg:w-[540px] lg:ml-14 lg:mt-0 mt-14">
+            <h2 class="text-3xl text-black font-bold text-center">My Cart</h2>
+            <hr>
+            <div class="selected-player flex flex-col lg:flex-row justify-between text-2xl text-black font-semibold ml-5">
+                <div class="name">Name</div>
+                <div class="price">Price</div>
+                <div class="category">Category</div>
+            </div>
+            <div id="selected-players-container"></div>
+            <hr>
+            <h3 class="padding text-3xl text-black font-bold lg:text-center ml-5">Total Cost:<span id="total-cost">0</span>$</h3>
+            <hr>
+            <div class="coupon-code space-x-2 ">
+                <input id="coupon-code" type="text" placeholder="Coupon Code" class="border-2 border-gray-500 p-3 rounded-lg">
+                <button onclick="updateGrandTotal('apply-btn')" id="apply-btn" class="apply-btn border-2 border-gray-500 p-3  rounded-lg text-xl text-black font-semibold bg-slate-200">Apply</button>
+            </div>
+            <hr>
+            <h3 class="padding text-3xl text-black font-bold lg:text-center shadow-xl shadow-indigo-500/40 pb-5 ml-5">Grand Total:<span id="grand-total">0</span>$</h3>
+        </div>
+    </div>
+   </section>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>
